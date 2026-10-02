@@ -9,12 +9,9 @@ class InterfaceGenerator:
 
     def __init__(self, app_instance):
         self.app = app_instance
-        # ВИПРАВЛЕННЯ ШЛЯХУ: Визначаємо папку, де лежить сама програма
         if getattr(sys, 'frozen', False):
-            # Якщо програма зібрана (PyInstaller)
             self.base_path = os.path.dirname(sys.executable)
         else:
-            # Якщо програма запущена через python3 main.py
             self.base_path = os.path.dirname(os.path.abspath(__file__))
 
         self.config_dir = os.path.join(self.base_path, self.CONFIG_DIR_NAME)
