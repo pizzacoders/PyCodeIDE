@@ -85,10 +85,10 @@ class CodeEditorApp(QMainWindow):
         self.file_list = QListWidget()
         self.file_list.itemDoubleClicked.connect(self.open_file)
 
-        self.btn_new_file = QPushButton("📄 New File")
+        self.btn_new_file = QPushButton("New File")
         self.btn_new_file.clicked.connect(self.create_new_file)
 
-        self.btn_delete_file = QPushButton("🗑️ Delete File")
+        self.btn_delete_file = QPushButton("Delete File")
         self.btn_delete_file.clicked.connect(self.delete_selected_file)
 
         sidebar_layout.addWidget(QLabel("EXPLORER"))
@@ -101,7 +101,7 @@ class CodeEditorApp(QMainWindow):
         self.tabs.tabCloseRequested.connect(self.close_tab)
 
         bottom_layout = QHBoxLayout()
-        self.settings_button = QPushButton("🎨 Randomize Theme")
+        self.settings_button = QPushButton("Randomize Theme")
         self.settings_button.clicked.connect(self.regenerate_theme)
         bottom_layout.addWidget(self.settings_button)
         bottom_layout.addStretch(1)
